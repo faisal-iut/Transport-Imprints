@@ -1,0 +1,83 @@
+	<div class="container">
+   <div class="content">
+                <ul class="ca-menu">
+                    <li>
+                         <a href="userinfo.php? <?php echo "user=$session->username"?>">
+                         
+                            <div class="ca-content">
+                                <h2 class="ca-main">My Account</h2>   
+                            </div>
+                        </a>
+                    </li>
+					
+                    <li>
+                        <a href="gps1/gps.htm">                           
+                            <div class="ca-content">
+                                <h2 class="ca-main">Track Me</h2>                               
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="WebApp/LocationHistory.html">
+                      
+                            <div class="ca-content">
+                                <h2 class="ca-main">History</h2>
+                               
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="WebApp/AutoUpdate.html">
+                           
+                            <div class="ca-content">
+                                <h2 class="ca-main">Auto Update</h2>
+                               
+                            </div>
+                        </a>
+                    </li>
+					<li>
+                        <a href="geolist.php">
+                           
+                            <div class="ca-content">
+                                <h2 class="ca-main">Geolist</h2>
+                               
+                            </div>
+                        </a>
+                    </li>
+					<li>
+                        <a href="useredit.php">
+                           
+                            <div class="ca-content">
+                                <h2 class="ca-main">Edit Account</h2>
+                               
+                            </div>
+                        </a>
+                    </li>
+					<?php
+					if($session->isAdmin()){
+					?>
+                    <li>
+					
+                        <a href="admin/admin.php">
+                           
+                            <div class="ca-content">
+                                <h2 class="ca-main">Admin Center</h2>
+                                
+                            </div>
+                        </a>
+                    </li>
+						<?php
+					}
+					?>
+					 <li>
+                        <a href="process.php">
+                           
+                            <div class="ca-content">
+                                <h2 class="ca-main">Logout</h2>
+                                
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- content -->
+        </div>

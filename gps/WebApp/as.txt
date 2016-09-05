@@ -1,0 +1,30 @@
+echo "<table class='sample'>
+ 
+
+<table class='sample'>
+
+<tr>
+
+<th>Username</th>
+
+<th>Users Balance</th>
+
+</tr>";
+
+ 
+
+while($row = mysql_fetch_array($result))
+
+  {
+
+  echo "<tr>";
+
+  echo "<td>" . $row['username'] . "</td>";
+
+  echo "<td>" . $row['balance'] . "</td>";
+
+  echo "</tr>";
+
+  }
+
+echo "</table>";

@@ -1,0 +1,34 @@
+<table border="3" cellpadding="12" cellspacing="10" width="568" class="tblListForm">
+<tr class="listheader">
+
+
+<td width="33">Username</td>
+<td width="31">Level</td>
+<td width="67">Email</td>
+<td width="43">Last Active</td>
+
+
+</tr>
+<?php
+$i=0;
+while($row = mysql_fetch_array($result)) {
+if($i%2==0)
+$classname="evenRow";
+else
+$classname="oddRow";
+?>
+<tr class="<?php if(isset($classname)) echo $classname;?>">
+
+<td><?php echo $row["username"]; ?></td>
+<td><?php echo $row["userlevel"]; ?></td>
+<td><?php echo $row["email"]; ?></td>
+<td><?php echo $row["timestamp"]; ?></td>
+
+</tr>
+<?php
+$i++;
+}
+?>
+
+
+</table>
